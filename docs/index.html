@@ -1,12 +1,14 @@
 <style>
-  html, body {
+  html,
+  body {
     margin: 0;
     height: 100%;
   }
 
   .container {
     display: flex;
-    flex-direction: row; /* Default to row for desktop */
+    flex-direction: row;
+    /* Default to row for desktop */
     height: 100vh;
     overflow: hidden;
   }
@@ -56,13 +58,13 @@
     color: white;
     text-align: center;
     opacity: 0;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
   }
 
   .section:hover .text-container {
     opacity: 1;
-    top: 20%; 
-    transform: translate(-50%, 0); 
+    top: 20%;
+    transform: translate(-50%, 0);
   }
 
   .section-title {
@@ -74,14 +76,14 @@
     text-align: center;
     font-size: 3rem;
     opacity: 1;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
   }
 
-  .section:nth-child(1) .section-title { 
+  .section:nth-child(1) .section-title {
     top: 20%;
   }
 
-  .section:nth-child(2) .section-title { 
+  .section:nth-child(2) .section-title {
     top: 50%;
   }
 
@@ -89,65 +91,68 @@
     top: 80%;
   }
 
-  @media(max-width:1000px){ /* Adjust breakpoint as needed */
+  @media(max-width:1000px) {
+
+    /* Adjust breakpoint as needed */
     .container {
-      flex-direction: column; /* Change to column for mobile */
+      flex-direction: column;
+      /* Change to column for mobile */
     }
 
-    .section:nth-child(1) .section-title { 
+    .section:nth-child(1) .section-title {
       top: 40%;
     }
-  
-    .section:nth-child(2) .section-title { 
+
+    .section:nth-child(2) .section-title {
       top: 40%;
     }
-  
+
     .section:nth-child(3) .section-title {
       top: 40%;
     }
-  
+
   }
 
   .section:hover .section-title {
     top: 10%;
-    transform: translate(-50%, 0); 
-    opacity: 1; 
+    transform: translate(-50%, 0);
+    opacity: 1;
   }
-
-  
 </style>
 
 <div class="container">
   <div class="section">
-    
     <div class="overlay">
       <a href="/about">
-      <div class="section-title">About</div> 
-      <div class="text-container">
-        <p>All About me and why I make stuff like this</p>
-      </div>
+        <div class="section-title">About</div>
+        <div class="text-container">
+          <p>All About me and why I make stuff like this</p>
+        </div>
+      </a>
     </div>
-  </a>
     <img src="assets/images/farmer_ronny.jpg" alt="Image 1">
-  
   </div>
 
   <div class="section">
     <div class="overlay">
-    <div class="section-title">Gifts</div> 
-      <div class="text-container">
-        <p>My Christmas List for this year!</p>
-      </div>
+      <a href="/find-me">
+        <div class="section-title">Gifts</div>
+        <div class="text-container">
+          <p>My Christmas List for this year!</p>
+        </div>
+      </a>
     </div>
     <img src="assets/images/Christmas_tree.jpeg" alt="Image 2">
   </div>
 
   <div class="section">
     <div class="overlay">
-    <div class="section-title">Where to Find Me</div> 
-      <div class="text-container">
-        <p>Platforms I am currently on</p>
-      </div>
+      <a href="/find-me">
+        <div class="section-title">Where to Find Me</div>
+        <div class="text-container">
+          <p>Platforms I am currently on</p>
+        </div>
+      </a>
     </div>
     <img src="assets/images/findme.jpeg" alt="Image 4">
   </div>
