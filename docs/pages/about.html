@@ -5,6 +5,7 @@ permalink: "/about"
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +14,22 @@ permalink: "/about"
         body {
             margin: 0;
             font-family: sans-serif;
-            display: flex; 
-            flex-direction: row; 
+            display: flex;
+            flex-direction: row;
             min-height: 100vh;
         }
 
         .container {
-            display: flex; 
-            flex: 1; 
+            display: flex;
+            flex: 1;
         }
 
         .sidebar {
             background-color: #333;
             color: #fff;
-            width: 10%; 
+            width: 10%;
             padding: 20px;
-            height: 100%; 
+            height: 100%;
         }
 
         .sidebar ul {
@@ -37,7 +38,7 @@ permalink: "/about"
         }
 
         .sidebar li {
-            margin-bottom: 15px; 
+            margin-bottom: 15px;
         }
 
         .sidebar a {
@@ -46,38 +47,71 @@ permalink: "/about"
         }
 
         .content {
-            flex: 1; 
-            padding: 0; 
+            flex: 1;
+            padding: 0;
         }
 
         .header {
-            height: 200px; 
+            height: 200px;
             position: relative;
-            margin: 0; 
-            padding: 0; 
+            margin: 0;
+            padding: 0;
         }
 
         .header img {
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .header h1 {
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%); 
-            color: white; 
-            text-align: center; 
-            z-index: 1; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1;
         }
-
+        h1 {
+            color: #4CAF50; /* Green */
+            text-align: center;
+            margin-bottom: 20px;
+          }
+      
+          h2 {
+            color: #333;
+            margin-bottom: 10px;
+          }
+      
+          p {
+            color: #555;
+            line-height: 1.6;
+          }
+      
+          a {
+            color: #007bff;
+            text-decoration: none;
+          }
+      
+          a:hover {
+            text-decoration: underline;
+          }
+      
+          .desc {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* White content box */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }
     </style>
 </head>
+
 <body>
 
-    <div class="container"> 
+    <div class="container">
         <div class="sidebar">
             <ul>
                 <li><a href="/">Home</a></li>
@@ -88,12 +122,31 @@ permalink: "/about"
         </div>
         <div class="content">
             <div class="header">
-                <img src="../assets/images/farmer_ronny.jpg" alt="Header Image"> 
-                <h1>{{ page.title }}</h1> 
+                <img src="../assets/images/farmer_ronny.jpg" alt="Header Image">
+                <h1>{{ page.title }}</h1>
             </div>
-            <p>This is the content of my about me page.</p> 
+            <div class="desc">
+
+                <h2>Who am I?</h2>
+                <p>The goofball who created this site. A guy with so much and so little time that I created this subpar website. 
+                  But hey, it's the thought that counts, right? 😉</p>
+            
+                <h2>What I Love (In no explicit order)</h2>
+                <ul>
+                  <li>Chocolate</li>
+                  <li>Computers</li>
+                  <li>My Wife and Family</li>
+                </ul>
+            
+                <h2>Why This Site?</h2>
+                <p>I challenge myself to make a wacky Christmas list each year so that friends and family can easily figure out what I want or need each Christmas. Also what else am I to do with all this free time? </p>
+            
+                <h2>Where's the List!</h2>
+                <p>Find my official list here: <a href="https://ronnyslist.com/gifts">ronnyslist.com/gifts</a></p>
+              </div>
         </div>
     </div>
 
 </body>
+
 </html>
