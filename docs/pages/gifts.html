@@ -68,6 +68,127 @@ layout: default
         text-align: center;
         z-index: 1;
     }
+
+    .cardcontent {
+        padding: 0.938rem 0.625rem;
+    }
+
+    .cardcontent h3 {
+        text-transform: capitalize;
+        font-size: clamp(1.5rem, 1.3909rem + 0.4364vw, 1.8rem);
+    }
+
+    .card-inner {
+        position: relative;
+        width: 15rem;
+        height: 18.75rem;
+        background: var(--clr);
+        border-radius: 1.25rem;
+        border-bottom-right-radius: 0;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 1.25rem;
+        overflow: hidden;
+    }
+
+    .imgBox {
+        position: absolute;
+        inset: 0;
+    }
+
+    .imgBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .icon {
+        position: absolute;
+        bottom: -0.375rem;
+        right: -0.375rem;
+        width: 6rem;
+        height: 6rem;
+        background: var(--clr);
+        border-top-left-radius: 50%;
+    }
+
+    .icon:hover .iconBox {
+        transform: scale(1.1);
+    }
+
+    .icon::before {
+        position: absolute;
+        content: "";
+        bottom: 0.375rem;
+        left: -1.25rem;
+        background: transparent;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+        box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+    }
+
+    .icon::after {
+        position: absolute;
+        content: "";
+        top: -1.25rem;
+        right: 0.375rem;
+        background: transparent;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+        box-shadow: 0.313rem 0.313rem 0 0.313rem var(--clr);
+    }
+
+    .iconBox {
+        position: absolute;
+        inset: 0.625rem;
+        background: #282828;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        color:white;
+        text-decoration: none;
+    }
+
+    .cardgrid {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        column-gap: 2rem;
+    }
+    .notice {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+      }
+      .warning {
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+      }
+      .danger {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+      }
+      .info {
+        background-color: #e7f1ff;
+        border: 1px solid #b8daff;
+      }
+      .notice-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
 </style>
 
 <div class="container">
@@ -83,6 +204,271 @@ layout: default
             <img src="../assets/images/Christmas_tree.jpeg" alt="Header Image">
             <h1>{{ page.title }}</h1>
         </div>
-        <p>This is the content of my about me page.</p>
+        <div class="notice info">
+            <div class="notice-title">INFO</div>
+            <p>At the end of the day, my favorite gifts are always the ones from the heart. Dont feel like you need to purchase any of these items.</p>
+        </div>
+        <div class="notice danger">
+            <div class="notice-title">Danger!</div>
+            <p>Talk to my Wife first to avoid duplicates!</p>
+        </div>
+        <h2> Cool Tech Gifts!</h2>
+        <div class="cardgrid">
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://m.media-amazon.com/images/I/71XGM5Gd0CL._AC_SX522_.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.amazon.com/dp/B08M47CM2L?ref_=cm_sw_r_apan_dp_47SGRCFQ0QK6B0T77Q6P&language=en-US"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Wireless Charger Stand</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://m.media-amazon.com/images/I/71w63bHse4L._AC_SY355_.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.amazon.com/Tymate-TM7-Pressure-Monitoring-Real-time/dp/B0CPPDR25B/ref=sr_1_3?dib=eyJ2IjoiMSJ9.p4didE5ziGzqWuE5We3gN6pzf0EUVuX81QISdXrSKybpyc0A5kqzjxxlfvYS8NXIsSvZ-RcLyH8l1fb5MbUqgrhu86YG9_upqyT8rYqEy8sV1Jp3yOasgoITJSGffKT4Qb98ZDrPz1Jd6xqgh-djAHIssN4oyP1Z9eR6r5Nj916co35X4jMbyMX0-6FK0Yp9fW0Q4NanjypoYzEM07orHzbtfObuEkGnotu-Dkkhljo.2GMi_rfn93WzEEacXd30j5eeQQe8bJsLr41VxKCga1I&dib_tag=se&keywords=tire+pressure+monitoring+system&qid=1733682783&sr=8-3"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Tire Pressure System</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://m.media-amazon.com/images/I/71uNMozN-6L._AC_SY355_.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.amazon.com/Channel-Inside-G-Sensor-Parking-Recording/dp/B0C2Y6WXJ7/ref=sr_1_10?crid=1K58JDM7G0B9K&dib=eyJ2IjoiMSJ9.yAZRG3Sr_Y71YuEmRD6Znu0sbyfw31oIC13reLF7mn44r3urwLdr8y9hzNF8WJOdxjmrPtJRxczkeu1wK0tJnYhu_ZJ4C06Zn6TrqZL3OjydOqbDMPUUzrEJuNdhGS4MJlmKQbh3VkVTNAOyasg6w4Bcd8X-aMTEfEhjvRI1JpmIb8JnkmusKcA9nxJvjqbxyIXo8GsDgygXOkStgTEIsBT1Au9VqbtWeMI57wsbJmY.wWIeIJ5GJD5EOIsmH6klzXN5E27B0j5laHAeRSXbdkw&dib_tag=se&keywords=dashcam&qid=1733682914&sprefix=dashcam%2Caps%2C104&sr=8-10"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Dash Cam</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img
+                                src="https://lh3.googleusercontent.com/K9PvLOGWhkAMjQxYm3HTEqdxL00yntOy2ZwbnxvjZrcLqnVRGqlExbdAJmm5WuSImStmS7SdtUJ0BzEzcChFGgF9R_Qqhyk5KxV6=rw-e365-nu-w450">
+                        </div>
+                        <div class="icon">
+                            <a href="https://store.google.com/config/pixel_buds_pro_2?hl=en-US&selections=eyJwcm9kdWN0RmFtaWx5IjoiY0dsNFpXeGZZblZrYzE5d2NtOWZNZz09IiwidmFyaWFudHMiOltbIjIiLCJNdz09Il1dfQ%3D%3D"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Pixel Buds Pro 2</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img
+                                src="https://m.media-amazon.com/images/I/81DnlPN2K4L._AC_SX679_.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.amazon.com/dp/B008JOKO1O/ref=cm_sw_r_apa_i_JJHMQDBTCQ3AMWBSDDNW_0?th=1"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Sterling Engine</h3>
+                </div>
+            </div>
+        </div>
+        <h2> Puzzles </h2>
+        <div class="cardgrid">
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://www.puzzlemaster.ca/images/puzzle-master-glossy.svg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.puzzlemaster.ca/browse/metalpuzzles/" class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Any Metal Puzzles</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img
+                                src="https://i5.walmartimages.com/seo/Super-Slider-Puzzle_c884f9a4-9cee-463e-93c1-f0615f405e68.a541d700bfbbfd27f47efed8621805b9.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.walmart.com/ip/Super-Slider-Puzzle/5013019710" class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Slider Puzzle</h3>
+                </div>
+            </div>
+        </div>
+        <h2> Books </h2>
+        <div class="cardgrid">
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://m.media-amazon.com/images/I/71dkmlbIipL._SY342_.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.amazon.com/dp/0470398841?ref_=cm_sw_r_apan_dp_9FFS35947DTCHQHD8719&language=en-US"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>The Art of the Chocolatier</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://m.media-amazon.com/images/I/41ZTDUn-8WL._SY445_SX342_.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.amazon.com/Making-Embedded-Systems-Patterns-Software/dp/1098151542/ref=sr_1_3?crid=LMY1PWAZXKZE&dib=eyJ2IjoiMSJ9.ZF3AC2CBy-2Pg8MnAsjPtA2K2yvXmEZ6Rlu1NL8uGEuhOK-6eSAhjekf89bgUQrnVtwDgPT14wVpSZNtshXD8NrcJ60rW84sJdJFztYPWRf_b_solv9HNIpqwqWYK80GSB-uxGxb3j4wozY2upe_TtL1cnq3sYZEGNk5-3JennSYtgyOkuRWhvbhAmq7fMNrjuIJ0gWkbDUBf0xICDYXmA5CV5XPnX1OCasivYewjv3pjII_4z6t2Ls0meHM8W018_NM5E_QZTyzm2Ha8VwvFi6beBXm5Sw5evpnQm4vXvA.hrMXfGZkyYjKjoMbYY5PWYhJAgTiTl5-V9JMp8ffKLE&dib_tag=se&keywords=embedded+systems&qid=1733681344&sprefix=embedded+sys%2Caps%2C114&sr=8-3"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Making Embedded Systems</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://m.media-amazon.com/images/I/71TIBDsVC3L._SY466_.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.amazon.com/Mastering-Linux-Security-Hardening-protecting/dp/1837630518/ref=sr_1_3_sspa?crid=2SYF5SUTR7JP&dib=eyJ2IjoiMSJ9.t5dSTnBbzA2SHVOidkwlrFBDThPank6MFipgJYcr6t3AaVPe5aBqO_ZleJZfzaP98oP1uoNsi8oFnx4bR2IV-E0FYMrrsN2dg3Oe_7MJO74xwuHAhVfW285M3QcfCHWIEPuNaXsqp_Ima6eLH2S_9hEwJ4DRLan-h7k5vxsahqnNn0wSmFxJyfo9l1ecuvHGts-RX5lg9xLKWwz9ZDQ7w-5vRu8OVyFMzdSB-4IZoNM.9aK3_zpOwyJmmRmly0TRXpKxVLsBWCucsnOs1TherOw&dib_tag=se&keywords=practical+linux&qid=1733681481&sprefix=practical+linux%2Caps%2C109&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Mastering Linux Security</h3>
+                </div>
+            </div>
+        </div>
+        <h2> Chocolates </h2>
+        <div class="cardgrid">
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://laderach.com/media/catalog/product/cache/580ce9e034439d240d609eb08dc353f4/1/0/10099162_Praline_s_11er_Herzbox_1_1.jpg">
+                        </div>
+                        <div class="icon">
+                            <a href="https://laderach.com/us-en/10100188-praline-selection-11pcs-heart-box" class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Laderach Chocolates</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://toakchocolate.com/cdn/shop/products/Bodegon-Alchemy-3_848x.jpg?v=1671053046"
+                                alt="">
+                        </div>
+                        <div class="icon">
+                            <a href="https://toakchocolate.com/products/alchemy-collection-8-pack"
+                                class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>To'ak Chocolates</h3>
+                </div>
+            </div>
+        </div>
+        <h2> Clothing </h2>
+        <h4> For Measurements feel free to contact me or my Wife</h4>
+        <div class="cardgrid">
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://nb.scene7.com/is/image/NB/u9060blk_nb_02_i?$pdpflexf2$&qlt=80&fmt=webp&wid=440&hei=440">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.newbalance.com/pd/9060/U9060V1-40381-PMG-NA.html?dwvar_U9060V1-40381-PMG-NA_style=U9060BLK#dwvar_U9060V1-40381-PMG-NA_size=9.5&dwvar_U9060V1-40381-PMG-NA_style=U9060BLK&dwvar_U9060V1-40381-PMG-NA_width=D&pid=U9060V1-40381-PMG-NA&quantity=1" class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>NewBalance Sneakers 9.5</h3>
+                </div>
+            </div>
+        </div>
+        <h2> A Man Can Dream </h2>
+        <div class="cardgrid">
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://images-porsche.imgix.net/-/media/329E707A3234485BBE98485116865780_E8DD4C47C7F14D41B61C1AE76B59FC1A_TA24Q3EIX0010-taycan-turbo-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                                alt="Porsche 911 Carrera S Coupe">
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.porsche.com" class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>Porsche Taycan Turbo S</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                        <div class="imgBox">
+                            <img src="https://us.shop.xreal.com/cdn/shop/files/air2pro.jpg?v=1719102328&width=823">
+                        </div>
+                        <div class="icon">
+                            <a href="https://us.shop.xreal.com/products/xreal-air-2-pro" class="iconBox">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontent">
+                    <h3>XReal Air 2 Glasses</h3>
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
