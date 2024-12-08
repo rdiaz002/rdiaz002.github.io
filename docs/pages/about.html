@@ -1,112 +1,109 @@
 ---
 title: "About Me"
 permalink: "/about"
+layout: default
 ---
+<title>{{ page.title }}</title>
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+    }
 
-<!DOCTYPE html>
-<html lang="en">
+    .container {
+        display: flex;
+        flex: 1;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: row;
-            min-height: 100vh;
-        }
+    .sidebar {
+        background-color: #333;
+        color: #fff;
+        width: 10%;
+        padding: 20px;
+        height: 100%;
+    }
 
-        .container {
-            display: flex;
-            flex: 1;
-        }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
 
-        .sidebar {
-            background-color: #333;
-            color: #fff;
-            width: 10%;
-            padding: 20px;
-            height: 100%;
-        }
+    .sidebar li {
+        margin-bottom: 15px;
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+    .sidebar a {
+        color: #fff;
+        text-decoration: none;
+    }
 
-        .sidebar li {
-            margin-bottom: 15px;
-        }
+    .content {
+        flex: 1;
+        padding: 0;
+    }
 
-        .sidebar a {
-            color: #fff;
-            text-decoration: none;
-        }
+    .header {
+        height: 200px;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
 
-        .content {
-            flex: 1;
-            padding: 0;
-        }
+    .header img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        .header {
-            height: 200px;
-            position: relative;
-            margin: 0;
-            padding: 0;
-        }
+    .header h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: 1;
+    }
 
-        .header img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    h1 {
+        color: #4CAF50;
+        /* Green */
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-        .header h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            z-index: 1;
-        }
-        h1 {
-            color: #4CAF50; /* Green */
-            text-align: center;
-            margin-bottom: 20px;
-          }
-      
-          h2 {
-            color: #333;
-            margin-bottom: 10px;
-          }
-      
-          p {
-            color: #555;
-            line-height: 1.6;
-          }
-      
-          a {
-            color: #007bff;
-            text-decoration: none;
-          }
-      
-          a:hover {
-            text-decoration: underline;
-          }
-      
-          .desc {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff; /* White content box */
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          }
-    </style>
+    h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .desc {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        /* White content box */
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
 </head>
 
 <body>
@@ -117,7 +114,6 @@ permalink: "/about"
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/gifts">Gifts</a></li>
-                <li><a href="/find-me">Find Me</a></li>
             </ul>
         </div>
         <div class="content">
@@ -128,25 +124,24 @@ permalink: "/about"
             <div class="desc">
 
                 <h2>Who am I?</h2>
-                <p>The goofball who created this site. A guy with so much and so little time that I created this subpar website. 
-                  But hey, it's the thought that counts, right? 😉</p>
-            
+                <p>The goofball who created this site. A guy with so much and so little time that I created this subpar
+                    website.
+                    But hey, it's the thought that counts, right? 😉</p>
+
                 <h2>What I Love (In no explicit order)</h2>
                 <ul>
-                  <li>Chocolate</li>
-                  <li>Computers</li>
-                  <li>My Wife and Family</li>
+                    <li>Chocolate</li>
+                    <li>Computers</li>
+                    <li>My Wife and Family</li>
                 </ul>
-            
+
                 <h2>Why This Site?</h2>
-                <p>I challenge myself to make a wacky Christmas list each year so that friends and family can easily figure out what I want or need each Christmas. Also what else am I to do with all this free time? </p>
-            
+                <p>I challenge myself to make a wacky Christmas list each year so that friends and family can easily
+                    figure out what I want or need each Christmas. Also what else am I to do with all this free time?
+                </p>
+
                 <h2>Where's the List!</h2>
-                <p>Find my official list here: <a href="https://ronnyslist.com/gifts">ronnyslist.com/gifts</a></p>
-              </div>
+                <p>Find my official list here: <a href="../gifts">ronnyslist.com/gifts</a></p>
+            </div>
         </div>
     </div>
-
-</body>
-
-</html>
