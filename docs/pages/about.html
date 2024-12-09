@@ -38,6 +38,7 @@ layout: default
     .sidebar a {
         color: #fff;
         text-decoration: none;
+        font-size: 30px;
     }
 
     .content {
@@ -102,6 +103,21 @@ layout: default
         /* White content box */
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width:1000px) {
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 15%;
+            padding: 20px;
+            height: 100%;
+            
+        }
+        
+        .sidebar a {
+            font-size: 30px;
+        }
     }
 </style>
 </head>
